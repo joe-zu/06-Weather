@@ -1,0 +1,21 @@
+img {
+    max-width: 100px;
+    margin: 12px;
+}
+.card-body img {
+    max-width: 40px;
+}
+li {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+.fiveday .card {
+    padding: 0px 5px 0px 5px;
+}
+.fiveday .card-body {
+    padding: 5px 0px 5px 0px;
+}
+.fiveday h5 {
+    margin: 0px
+}
