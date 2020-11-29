@@ -76,7 +76,7 @@ function displayWeatherForecast(city) {
             var cityLon = response.coord.lon;
 
             // UV API CALL
-            var queryUvURL = "http://api.openweathermap.org/data/2.5/uvi?lat=" + cityLat + "&lon=" + cityLon + "&appid=" + APIKey;
+            var queryUvURL = "https://api.openweathermap.org/data/2.5/uvi?lat=" + cityLat + "&lon=" + cityLon + "&appid=" + APIKey;
     
                 $.ajax({
                     url: queryUvURL,
