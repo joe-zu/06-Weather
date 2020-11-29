@@ -1,3 +1,16 @@
+
+#forecast {
+    display: none;
+}
+
+.h1-head {
+    background: grey;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    color: white;
+}
+
 img {
     max-width: 100px;
     margin: 12px;
@@ -10,12 +23,28 @@ li {
     margin: 0px;
     padding: 0px;
 }
-.fiveday .card {
+#five-day .card {
     padding: 0px 5px 0px 5px;
 }
-.fiveday .card-body {
+#five-day .card-body {
     padding: 5px 0px 5px 0px;
 }
-.fiveday h5 {
-    margin: 0px
+#five-day h5 {
+    margin: 0px;
+    font-size: 12px;
+}
+#five-day li {
+    font-size: 14px;
+}
+#five-day img {
+    max-width: 60px;
+}
+
+/* CITY LIST */
+
+#city-list {
+    
+}
+#city-list li:hover {
+    background-color: lightblue;
 }

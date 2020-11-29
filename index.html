@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joe's Links</title>
-    <link rel="icon" type="image/png" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/237/link-symbol_1f517.png"/>
+    <title>06-Weather</title>
+    <link rel="icon" type="image/png" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/271/umbrella_2602-fe0f.png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header>
-    <div class="container-fluid">
+    <div class="container-fluid h1-head">
         <h1>Weather Dashboard</h1>
     </div>
 </header>
@@ -21,30 +21,28 @@
             <div class="col-4">
                 <h3>Search for a City</h3>
                 <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    <input id="city-input" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button id="search" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                 </form>
                 <div class="card my-4" style="width: 18rem;">
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item">New York</li>
-                      <li class="list-group-item">Los Angeles</li>
-                      <li class="list-group-item">Tokyo</li>
+                    <ul id="city-list" class="list-group list-group-flush">
+                    <!--LIST ITEMS GENERATED IN script.js-->
                     </ul>
                 </div>
             </div>
 
-            <div class="col-8">
+            <div id="forecast" class="col-8"> 
                 <div class="card">
-                    <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/271/sun-behind-rain-cloud_1f326-fe0f.png" class="card-img-top" alt="Scatterd Showers">
+                    <img id="main-icon" class="card-img-top">
                     
                     <div class="card-body">
-                      <h2>New York (date)</h2>
+                      <h2 id="city"></h2>
                         <div class="col-12">
                             <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Temperature: <span>60º F</span></li>
-                                <li class="list-group-item">Humidity: <span>40%</span></li>
-                                <li class="list-group-item">Wind Speed: <span>12 MPH</span></li>
-                                <li class="list-group-item">UV Index: <span><button type="button" class="btn btn-danger">9.41</button></span></li>
+                                <li class="list-group-item">Temperature: <span id="temp"></span> ºF</li>
+                                <li class="list-group-item">Humidity: <span id="humidity"></span> %</li>
+                                <li class="list-group-item">Wind Speed: <span id="wind-speed">12</span> MPH</li>
+                                <li class="list-group-item">UV Index: <span ><button id="uv-index" type="button" class="btn "></button></span></li>
                             </ul>
                         </div>
                     </div>  
@@ -54,65 +52,25 @@
                         <h4>5 Day Forecast</h4>
                     </div>
                 </div>
+
                 
-                <div class="row row-cols-5 fiveday">
 
-                    <div class="card text-center bg-light mb-3 col" style="max-width: 10rem;">
+                <div id="five-day" class="row row-cols-5">
+
+<!--FIVE DAY FORECAST GENERATED IN script.js -->
+
+<!--Example of forescast card-->
+
+                    <!-- <div class="card text-center text-white bg-secondary mb-3 col" style="max-width: 10rem;">
                         <div class="card-body">
                             <h5 class="card-title">Date</h5>
-                            <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/271/sun-behind-rain-cloud_1f326-fe0f.png" class="card-img-top" alt="Scatterd Showers">
-                          <ul class="list-group list-group-flush">
-                              <li>Temp: <span>60º F</span></li>
-                              <li>Humidity: <span>40%</span></li>
-                          </ul>
+                            <img src="http://openweathermap.org/img/wn/10d@2x.png">
+                            <ul class="list-group list-group-flush">
+                                <li>Temp: 60º</li>
+                                <li>Humidity: 40%</li>
+                            </ul>
                         </div>
-                    </div>
-                    
-                    <div class="card text-center bg-light mb-3 col" style="max-width: 10rem;">
-                        <div class="card-body">
-                            <h5 class="card-title">Date</h5>
-                            <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/271/sun-behind-rain-cloud_1f326-fe0f.png" class="card-img-top" alt="Scatterd Showers">
-                          <ul class="list-group list-group-flush">
-                              <li>Temp: <span>60º F</span></li>
-                              <li>Humidity: <span>40%</span></li>
-                          </ul>
-                        </div>
-                    </div>
-
-                    <div class="card text-center bg-light mb-3 col" style="max-width: 10rem;">
-                        <div class="card-body">
-                            <h5 class="card-title">Date</h5>
-                            <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/271/sun-behind-rain-cloud_1f326-fe0f.png" class="card-img-top" alt="Scatterd Showers">
-                          <ul class="list-group list-group-flush">
-                              <li>Temp: <span>60º F</span></li>
-                              <li>Humidity: <span>40%</span></li>
-                          </ul>
-                        </div>
-                    </div>
-
-                    <div class="card text-center bg-light mb-3 col" style="max-width: 10rem;">
-                        <div class="card-body">
-                            <h5 class="card-title">Date</h5>
-                            <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/271/sun-behind-rain-cloud_1f326-fe0f.png" class="card-img-top" alt="Scatterd Showers">
-                          <ul class="list-group list-group-flush">
-                              <li>Temp: <span>60º F</span></li>
-                              <li>Humidity: <span>40%</span></li>
-                          </ul>
-                        </div>
-                    </div>
-
-                    <div class="card text-center bg-light mb-3 col" style="max-width: 10rem;">
-                        <div class="card-body">
-                            <h5 class="card-title">Date</h5>
-                            <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/271/sun-behind-rain-cloud_1f326-fe0f.png" class="card-img-top" alt="Scatterd Showers">
-                          <ul class="list-group list-group-flush">
-                              <li>Temp: <span>60º F</span></li>
-                              <li>Humidity: <span>40%</span></li>
-                          </ul>
-                        </div>
-                    </div>
-
-
+                    </div> -->
 
                 </div>
             </div>
@@ -121,10 +79,12 @@
     </div>
 </section>
  
+<script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+
 </body>
 </html>
